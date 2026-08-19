@@ -48,10 +48,6 @@ run in the paper took more than ten hours on a four-core laptop.
 | `compare.c` | Compares strategies A, B and C under three regimes: equal digit count, equal `p`, and equal wall-clock budget. |
 | `indices.c` | For every `n` up to a limit: `omega(n)`, `Omega(n)`, the combined index `omega + (1 - omega/Omega)`, and the Mertens boost `prod q/(q-1)`. Sieve-based, two bytes per `n`. |
 
-Older versions (`family_sweep.c`, `family_sweep2.c`, `family_sweep3.c`,
-`hunt.c`, `primehunt.c`, `proth_sieve.c`) are kept for the record; they were
-superseded during the work and are not needed to reproduce anything.
-
 ## The analysis scripts
 
 | file | what it does |
@@ -87,7 +83,12 @@ calibration choose it, and `-s` fixes the seed for strategy C.
 ## Data
 
 `b399051.txt` and `b399052.txt` are the OEIS b-files for the Fortunate-type
-functions, covering `p` from 5 to 5281.
+functions of Section 10, giving all 699 and 701 computed values respectively,
+for `p` from 5 to 5281. Each line is an index and a value, in the format the
+OEIS expects.
+
+`run_B_10h.sh` and `run_rented.sh` are the driver scripts for the two large
+runs reported in Section 9.
 
 ## Sequences
 
